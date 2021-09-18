@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/the-art-of-wars",
+      "handler": "the-art-of-war.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/the-art-of-wars/count",
+      "handler": "the-art-of-war.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/the-art-of-wars/:id",
+      "handler": "the-art-of-war.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/the-art-of-wars",
+      "handler": "the-art-of-war.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/the-art-of-wars/:id",
+      "handler": "the-art-of-war.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/the-art-of-wars/:id",
+      "handler": "the-art-of-war.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

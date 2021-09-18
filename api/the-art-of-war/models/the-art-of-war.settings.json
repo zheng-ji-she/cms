@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "the_art_of_wars",
+  "info": {
+    "name": "The Art of War",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Text": {
+      "type": "richtext"
+    },
+    "Title": {
+      "type": "string"
+    }
+  }
+}
