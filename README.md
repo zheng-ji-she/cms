@@ -15,7 +15,7 @@
 
 ## 部署
 
-这个项目部署在Heroku上。暂时手动部署(https://strapi.io/documentation/developer-docs/latest/setup-deployment-guides/deployment/hosting-guides/heroku.html)。后面会用Github自动部署(https://devcenter.heroku.com/articles/github-integration)。
+这个项目部署在Heroku上。使用[Github自动部署](https://devcenter.heroku.com/articles/github-integration)。
 
 ## 使用
 
