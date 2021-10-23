@@ -29,3 +29,4 @@ it('strapi is defined', () => {
 });
 
 require('./hello');
+require('./user');
