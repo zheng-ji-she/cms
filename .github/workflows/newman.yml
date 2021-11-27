@@ -1,9 +1,11 @@
 name: Newman API testing
 
 on:
-  schedule:
-    # * is a special character in YAML so you have to quote this string
-    - cron:  '*/10 * * * *'
+  # schedule:
+  #   # * is a special character in YAML so you have to quote this string
+  #   - cron:  '*/5 * * * *'
+  push:
+    branches: [ main ]
 
 jobs:
   newman:
@@ -13,3 +15,4 @@ jobs:
       - uses: matt-ball/newman-action@master
         with:
           collection: ZJS-CMS.postman_collection.json
+          environment: ZJS-CMS.postman_collection.json

@@ -45,12 +45,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://zjs-cms.herokuapp.com/the-art-of-wars",
-					"protocol": "https",
+					"raw": "{{HOST}}/the-art-of-wars",
 					"host": [
-						"zjs-cms",
-						"herokuapp",
-						"com"
+						"{{HOST}}"
 					],
 					"path": [
 						"the-art-of-wars"
@@ -85,12 +82,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://zjs-cms.herokuapp.com/the-art-of-wars/1",
-					"protocol": "https",
+					"raw": "{{HOST}}/the-art-of-wars/1",
 					"host": [
-						"zjs-cms",
-						"herokuapp",
-						"com"
+						"{{HOST}}"
 					],
 					"path": [
 						"the-art-of-wars",
