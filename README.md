@@ -8,14 +8,13 @@
 
 ## 测试
 
-可以添加以下测试作为学习。
-
 - Unit test. 在`/tests`目录下，具体参考[Strapi Unit Testing](https://strapi.io/documentation/developer-docs/latest/guides/unit-testing.html).
 - API test. 在`/tests/hello`目录下，使用supertest，具体参考[Testing basic endpoint controller](https://strapi.io/documentation/developer-docs/latest/guides/unit-testing.html#testing-basic-endpoint-controller).
+- Postman API test. 位置在Github Actions`.github/workflows/newman.yml`。具体参考[newman-action](https://github.com/marketplace/actions/newman-action).
 
 ### TODO
 
-- API 测试（Postman, Pact...）
+- API 测试（Pact...）
 - 性能测试(Load testing? 不清楚Heroku免费账户是否能够承受)
 
 ## CI
