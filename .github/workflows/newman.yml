@@ -3,7 +3,7 @@ name: Newman API testing
 on:
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '10 * * * *'
+    - cron:  '1/10 * * * *'
 
 jobs:
   newman:
