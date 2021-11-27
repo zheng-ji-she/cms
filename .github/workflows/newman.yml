@@ -15,4 +15,4 @@ jobs:
       - uses: matt-ball/newman-action@master
         with:
           collection: ZJS-CMS.postman_collection.json
-          environment: ZJS-CMS.postman_collection.json
+          environment: ZJS-CMS.postman_environment.json
