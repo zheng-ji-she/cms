@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "cccc06eb-c5f6-493a-b7c4-b238a63dff02",
+		"name": "ZJS-CMS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "find the-art-of-wars",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status should be 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"response must be valid and have a body\", function () {",
+							"     pm.response.to.be.ok;",
+							"     pm.response.to.be.withBody;",
+							"     pm.response.to.be.json;",
+							"});",
+							"",
+							"pm.test(\"response must be an arry\", function () {",
+							"     const responseJson = pm.response.json();",
+							"     pm.expect(responseJson).to.be.an('array').that.is.not.empty;",
+							"});",
+							"",
+							"pm.test(\"response item should have all properties\", function () {",
+							"     const responseJson = pm.response.json();",
+							"     pm.expect(responseJson[0].id).to.be.a('number');",
+							"     pm.expect(responseJson[0].Text).to.be.a('string');",
+							"     pm.expect(responseJson[0].Title).to.be.a('string');",
+							"     pm.expect(responseJson[0].published_at).to.be.a('string');",
+							"     pm.expect(responseJson[0].created_at).to.be.a('string');",
+							"     pm.expect(responseJson[0].updated_at).to.be.a('string');",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://zjs-cms.herokuapp.com/the-art-of-wars",
+					"protocol": "https",
+					"host": [
+						"zjs-cms",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"the-art-of-wars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findone the-art-of-wars",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"chapter should have all properties\", function () {",
+							"     const responseJson = pm.response.json();",
+							"     pm.expect(responseJson.id).to.be.a('number');",
+							"     pm.expect(responseJson.Text).to.be.a('string');",
+							"     pm.expect(responseJson.Title).to.be.a('string');",
+							"     pm.expect(responseJson.published_at).to.be.a('string');",
+							"     pm.expect(responseJson.created_at).to.be.a('string');",
+							"     pm.expect(responseJson.updated_at).to.be.a('string');",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://zjs-cms.herokuapp.com/the-art-of-wars/1",
+					"protocol": "https",
+					"host": [
+						"zjs-cms",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"the-art-of-wars",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

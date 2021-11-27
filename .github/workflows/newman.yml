@@ -1,0 +1,15 @@
+name: Newman API testing
+
+on:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '10 * * * *'
+
+jobs:
+  newman:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: matt-ball/newman-action@master
+        with:
+          collection: ZJS-CMS.postman_collection.json
