@@ -4,12 +4,14 @@ orbs:
 jobs:
   newman:
     executor: newman/postman-newman-docker
+    environment:
+      HOST: https://zjs-cms.herokuapp.com
     steps:
       - checkout
       - newman/newman-run:
           collection: ./ZJS-CMS.postman_collection.json
           timeout: '5000'
-          additional-options: --env-var "HOST=https://zjs-cms.herokuapp.com"
+          additional-options: --env-var "HOST=${HOST}"
 workflows:
   newman_api:
     jobs:
