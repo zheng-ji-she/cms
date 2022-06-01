@@ -8,8 +8,8 @@ jobs:
       - checkout
       - newman/newman-run:
           collection: ./ZJS-CMS.postman_collection.json
-          environment: ./ZJS-CMS.postman_environment.json
-          timeout: '1000'
+          timeout: '5000'
+          additional-options: --env-var "HOST=https://zjs-cms.herokuapp.com"
 workflows:
   newman_api:
     jobs:
