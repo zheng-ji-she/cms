@@ -1,0 +1,16 @@
+version: '2.1'
+orbs:
+  newman: postman/newman@1.0.0
+jobs:
+  newman-collection-run-env-timeout:
+    executor: newman/postman-newman-docker
+    steps:
+      - checkout
+      - newman/newman-run:
+          collection: ./ZJS-CMS.postman_collection.json
+          environment: ./ZJS-CMS.postman_environment.json
+          timeout: '1000'
+workflows:
+  newman_api:
+    jobs:
+      - newman-collection-run-env-timeout
